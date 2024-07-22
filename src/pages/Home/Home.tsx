@@ -4,6 +4,7 @@ import { setData } from '../../redux/slices/dataSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hook';
 import { ListResponseI, PokemonUrl } from '../../types';
 import { List } from '../../components/List/List';
+import './Home.css'
 
 export const Home = () => {
   const dispatch = useAppDispatch();
