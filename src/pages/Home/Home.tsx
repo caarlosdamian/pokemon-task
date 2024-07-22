@@ -24,7 +24,7 @@ export const Home = () => {
   };
 
   return (
-    <div className="left">
+    <section className="content" >
       <List
         items={pokemonData.results as ListResponseI<PokemonUrl>['results']}
       />
@@ -34,6 +34,6 @@ export const Home = () => {
         )}
         <button onClick={() => handleControlChange('next')}>next</button>
       </div>
-    </div>
+    </section>
   );
 };

@@ -11,36 +11,22 @@
   flex-direction: column;
 }
 
-.right {
+.side {
   flex: 1;
   display: flex;
   align-items: start;
   justify-content: center;
 }
 
-.left {
+.content {
   flex: 2;
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.controls {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: 24px;
 }
 
 @media (min-width: 800px) {
   .page {
     flex-direction: row;
   }
-  .left {
+  .content {
     border-left: 3px solid #e5e5e5;
     padding: 48px;
   }
