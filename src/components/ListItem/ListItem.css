@@ -13,6 +13,10 @@
   background: #fafafa;
 }
 
+.active {
+  background: #dfdddd;
+}
+
 .listItem__pokeball {
   width: 24px;
   height: 24px;
