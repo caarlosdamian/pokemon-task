@@ -1,0 +1,17 @@
+li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 24px;
+  border: 1px solid #fafafa;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.name {
+}
+
+.pokeball {
+  width: 24px;
+  height: 24px;
+}
