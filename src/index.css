@@ -30,6 +30,14 @@
   gap: 12px;
 }
 
+.controls{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 24px;
+}
+
 @media (min-width: 800px) {
   .page {
     flex-direction: row;

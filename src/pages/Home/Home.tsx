@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import { ListItem } from '../../components/ListItem/ListItem';
+import { useEffect } from 'react';
 import { getAllPokemons } from '../../services/getAllPokemons';
-import { PokemonI } from '../../types';
-import { useAppDispatch, useAppSelector } from '../../redux/hook';
-import { setData } from '../../redux/dataSlice';
+import { setData } from '../../redux/slices/dataSlice';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks/hook';
+import { ListResponseI, PokemonUrl } from '../../types';
+import { List } from '../../components/List/List';
 
 export const Home = () => {
-  // const [pokemonData, setPokemonData] = useState([]);
   const dispatch = useAppDispatch();
   const pokemonData = useAppSelector((state) => state.data);
   useEffect(() => {
@@ -26,11 +25,9 @@ export const Home = () => {
 
   return (
     <div className="left">
-      <ul className="list">
-        {pokemonData?.results?.map(({ name, url }: PokemonI) => (
-          <ListItem key={url} name={name} />
-        ))}
-      </ul>
+      <List
+        items={pokemonData.results as ListResponseI<PokemonUrl>['results']}
+      />
       <div className="controls">
         {pokemonData?.previous && (
           <button onClick={() => handleControlChange('prev')}>prev</button>

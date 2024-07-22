@@ -6,9 +6,9 @@ interface Props {
 
 export const ListItem = ({ name }: Props) => {
   return (
-    <li>
-      <span className='name'>{name}</span>
-      <img className='pokeball' src="/pokeball.png" alt="pokeball" />
+    <li className='listItem'>
+      <span className='listItem__name'>{name}</span>
+      <img className='listItem__pokeball' src="/pokeball.png" alt="pokeball" />
     </li>
   );
 };
