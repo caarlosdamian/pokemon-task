@@ -1,4 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { ListResponseI, PokemonUrl } from '../../types';
+
+const initialState: ListResponseI<PokemonUrl> = {
+  count: 0,
+  next: null,
+  previous: null,
+  results: [],
+};
 
 const PokemonSlice = createSlice({
   name: 'data',
@@ -8,7 +16,7 @@ const PokemonSlice = createSlice({
       return state;
     },
   },
-  initialState: {},
+  initialState,
 });
 
 export const { setData } = PokemonSlice.actions;

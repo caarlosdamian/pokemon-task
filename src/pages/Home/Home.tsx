@@ -4,7 +4,7 @@ import { setData } from '../../redux/slices/dataSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hook';
 import { ListResponseI, PokemonUrl } from '../../types';
 import { List } from '../../components/List/List';
-import './Home.css'
+import './Home.css';
 
 export const Home = () => {
   const dispatch = useAppDispatch();
@@ -15,17 +15,17 @@ export const Home = () => {
 
   const handleControlChange = async (type: 'next' | 'prev') => {
     if (type === 'next') {
-      const response = await getAllPokemons(pokemonData.next);
+      const response = await getAllPokemons(pokemonData.next as string);
       dispatch(setData(response));
       return;
     }
-    const response = await getAllPokemons(pokemonData.previous);
+    const response = await getAllPokemons(pokemonData.previous as string);
     dispatch(setData(response));
     return;
   };
 
   return (
-    <section className="content" >
+    <section className="content">
       <List
         items={pokemonData.results as ListResponseI<PokemonUrl>['results']}
       />
