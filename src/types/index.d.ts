@@ -13,21 +13,21 @@ export interface ListResponseI<T> {
 interface PokemonDetailsI {
   abilities: Ability2[];
   base_experience: number;
-  cries: Cries;
+  cries: Cries | undefined;
   forms: Ability[];
   game_indices: Gameindex[];
   height: number;
-  held_items: any[];
+  held_items: string[];
   id: number;
   is_default: boolean;
   location_area_encounters: string;
   moves: Move[];
   name: string;
   order: number;
-  past_abilities: any[];
-  past_types: any[];
-  species: Ability;
-  sprites: Sprites;
+  past_abilities: string[];
+  past_types: string[];
+  species: Ability | undefined;
+  sprites: Sprites | undefined;
   stats: Stat[];
   types: Type[];
   weight: number;
