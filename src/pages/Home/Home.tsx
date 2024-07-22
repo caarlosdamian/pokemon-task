@@ -31,9 +31,9 @@ export const Home = () => {
       />
       <div className="controls">
         {pokemonData?.previous && (
-          <button onClick={() => handleControlChange('prev')}>prev</button>
+          <button onClick={() => handleControlChange('prev')}>Prev</button>
         )}
-        <button onClick={() => handleControlChange('next')}>next</button>
+        <button onClick={() => handleControlChange('next')}>Next</button>
       </div>
     </section>
   );

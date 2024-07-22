@@ -4,4 +4,13 @@
   justify-content: center;
   width: 100%;
   margin-top: 24px;
+  gap: 8px;
+}
+
+.controls button {
+  border: none;
+  background: lightgrey;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
 }
