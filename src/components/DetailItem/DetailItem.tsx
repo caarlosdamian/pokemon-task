@@ -4,17 +4,14 @@ interface Props {
   label: string;
   value: string | number;
   className?: string;
+  testid?: string;
 }
 
-export const DetailItem = ({
-  label,
-  value,
-  className,
-}: Props) => {
+export const DetailItem = ({ label, value, className, testid }: Props) => {
   return (
     <div className={className}>
-      <span>{label}</span>
-      <span>
+      <span data-testid={`${testid}-label`}>{label}</span>
+      <span data-testid={`${testid}-value`}>
         {typeof value === 'string' ? capitalize(value) : value}
       </span>
     </div>

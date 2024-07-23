@@ -9,9 +9,15 @@ import './Details.css';
 
 export const Details = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const { height, id, types, weight, stats, abilities } = useAppSelector(
-    (state) => state.details
-  );
+  const {
+    height,
+    id,
+    types,
+    weight,
+    stats,
+    abilities,
+    name: pokemonName,
+  } = useAppSelector((state) => state.details);
   const { name } = useParams<{ name: string }>();
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
@@ -49,21 +55,29 @@ export const Details = () => {
             />
           </div>
           <div className="main__details">
-            <DetailItem className="main__detail" label="Number:" value={id} />
+            <DetailItem
+              className="main__detail"
+              label="Number:"
+              testid="number"
+              value={id}
+            />
             <DetailItem
               className="main__detail"
               label="Name:"
-              value={name as string}
+              value={pokemonName as string}
+              testid="name"
             />
             <DetailItem
               className="main__detail"
               label="Height:"
               value={height}
+              testid="height"
             />
             <DetailItem
               className="main__detail"
               label="Weight:"
               value={weight}
+              testid="weight"
             />
           </div>
           <div className="secondary__details">
@@ -73,13 +87,14 @@ export const Details = () => {
                   key={stat.stat.name}
                   name={stat.stat.name}
                   value={stat.base_stat}
+                  testid={stat.stat.name}
                 />
               ))}
             </div>
             <div className="abilities">
               <span>Abilities</span>
               {abilities?.map((item) => (
-                <span>{item.ability.name}</span>
+                <span key={item.ability.name}>{item.ability.name}</span>
               ))}
             </div>
           </div>

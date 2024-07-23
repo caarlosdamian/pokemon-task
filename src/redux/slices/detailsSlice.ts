@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { PokemonDetailsI } from '../../types';
 
-const initialState: PokemonDetailsI = {
+export const initialState: PokemonDetailsI = {
   abilities: [],
   base_experience: 0,
   cries: undefined,

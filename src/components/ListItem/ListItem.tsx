@@ -24,11 +24,14 @@ export const ListItem = ({ name }: Props) => {
 
   return (
     <li
-      className={`listItem ${state?.name === name ? 'active' : ''} `}
+      data-testid="listItem"
+      className={`listItem ${state?.name === name ? 'active' : ''}`}
       onClick={handleClick}
       onDoubleClick={handleDoubleClick}
     >
-      <span className="listItem__name">{name}</span>
+      <span data-testid="pokemonName" className="listItem__name">
+        {name}
+      </span>
       <img className="listItem__pokeball" src="/pokeball.png" alt="pokeball" />
     </li>
   );

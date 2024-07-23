@@ -1,6 +1,6 @@
 import { PokemonUrl } from '../../types';
 import { ListItem } from '../ListItem/ListItem';
-import './List.css'
+import './List.css';
 
 interface Props {
   items: PokemonUrl[];
@@ -8,7 +8,7 @@ interface Props {
 
 export const List = ({ items }: Props) => {
   return (
-    <ul className="list">
+    <ul className="list" data-testid="list">
       {items?.map(({ name, url }: PokemonUrl) => (
         <ListItem key={url} name={name} />
       ))}
