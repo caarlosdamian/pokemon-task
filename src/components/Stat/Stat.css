@@ -1,0 +1,27 @@
+.stat {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat_value{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.grapic_container {
+  background-color: grey;
+  width: 250px;
+  height: 25px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.grapic {
+  background-color: red;
+  height: 25px;
+  border-radius: 12px;
+  position: absolute;
+}
